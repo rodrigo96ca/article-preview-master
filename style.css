@@ -22,13 +22,28 @@ main{
     height: 100vh;
     display: flex;
     align-items: center;
-    
-    
+       
 
 }
-.box-container{
+.box-container-main{
+    display: flex;
+    flex-direction: column;
     width: 375px;
-    height: 90%;
+    height: 530px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    
+}
+
+section .inactive{
+    display: none;
+}
+.box-container{
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    height: 530px;
     margin: 0 auto;
     border-radius: 20px;
     overflow: hidden;
@@ -66,38 +81,117 @@ main{
     font-size:small;
 }
 
+/* Contenedor primera vista */
 .author-container{
+    
+    height: 100%;
     width: 85%;
-    margin: 0 auto;
+      
     display: flex;
-    margin-top: 45px;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     position: relative;
+    margin:30px auto 0 auto;
+    
     
 }
 
 .img-logo{
-    height: 40px;
+    height: 35px;
     border-radius: 50%;
+    
     
 }
 .author-info{
-    position: absolute;
-    left: 70px;
+    padding-right: 90px;
+
+
 }
 .author-info .name{
-    color: var(--VeryDarkGrayishBlue);
     font-weight: bolder;
-    margin-bottom: 5px;
+    color: var(--VeryDarkGrayishBlue);
+
 }
 .author-info .date{
-    color: var(--GrayishBlue);
+    color: var(--GrayishBlue)
+    
+}
+
+/* Contenedor inactive */
+
+.author-container2{
+    height: 100%;
+    background: var(--VeryDarkGrayishBlue);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 30px;
+    
+    
+
+
+}
+.author-container2 .mark{
+    color: var(--DesaturatedDarkBlue);
+    font-weight: 700;
+    letter-spacing: 3px;
+    
+
+
+}
+.author-container2 .social-logos{
+    
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+    padding-right: 50px;
+    margin-right: 20px;
+    
 }
 .arrow-icon{
-    position: absolute;
-    right: 15px;
-    bottom: 5px;
+    height: 40px;
+    width:40px ;
+    box-sizing: border-box;
     background: var(--LightGrayishBlue);
     border-radius: 50%;
     padding: 10px;
+    
 }
+.icon2{
+    margin-right: 23px;
+    
+
+}
+
+@media (min-width: 1040px){
+    .box-container-main{
+        width: 850px;
+        flex-direction: row;
+        height: 300px;
+
+
+    }
+    .box-container{
+        border-radius: 0px 5px 5px 0px;
+        height: 100%;
+        width: 700px;
+        justify-content: space-between;
+    }
+    .img-box{
+        height: 100%;
+        width: auto;
+        
+    }
+    .author-container{
+    
+        height: auto;    
+        margin-bottom: 28px;   
+        
+    }
+
+}
+
+
